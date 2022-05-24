@@ -1,11 +1,20 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Image } from 'react-native';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
       <StatusBar style="auto" />
+      <Image
+        style={{
+          width: 100,
+          height: 100,
+        }}
+        source={{
+          uri: "https://c.tenor.com/MYZgsN2TDJAAAAAC/this-is.gif",
+        }}
+      />
+      <Text>Gif should be animated</Text>
     </View>
   );
 }
