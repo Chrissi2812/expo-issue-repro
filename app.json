@@ -2,7 +2,7 @@
   "expo": {
     "name": "expo-broken",
     "slug": "expo-broken",
-    "version": "1.0.1",
+    "version": "1.0.3",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -12,7 +12,10 @@
       "backgroundColor": "#ffffff"
     },
     "updates": {
-      "fallbackToCacheTimeout": 0
+      "enabled": true,
+      "fallbackToCacheTimeout": 0,
+      "checkAutomatically": "ON_ERROR_RECOVERY",
+      "url": "https://u.expo.dev/c319b266-4332-439b-b65a-121fb438dbeb"
     },
     "assetBundlePatterns": [
       "**/*"
@@ -25,10 +28,22 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
       },
+      "versionCode": 5,
       "package": "com.pixelkraft.expobroken"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "c319b266-4332-439b-b65a-121fb438dbeb"
+      }
+    },
+    "plugins": [
+      "expo-updates"
+    ],
+    "runtimeVersion": {
+      "policy": "sdkVersion"
     }
   }
 }
