@@ -5,14 +5,24 @@ import {
   Image,
 } from 'react-native';
 
-import {
-  useSharedValue,
-} from 'react-native-reanimated';
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/firestore';
 
+const firebaseConfig =  {
+  /**
+   * SUPPLY A VALID FIREBASE_CONFIG
+   *
+   * REMOVED MINE
+   */
+};
+const firebaseApp = firebase.initializeApp(firebaseConfig);
+const firestore = firebase.firestore(firebaseApp);
+
+// Doesn't really matter what function you call.
+firestore.waitForPendingWrites();
+// firestore.doc('').get() would also trigger the error
 
 export default function App() {
-  const height = useSharedValue(0);
-
   return (
     <View style={styles.container}>
       <Image
